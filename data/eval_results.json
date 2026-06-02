@@ -1,0 +1,35 @@
+{
+  "total": 30,
+  "correct": 26,
+  "failed": 1,
+  "accuracy": 86.7,
+  "avg_latency_ms": 1420,
+  "note": "Evaluated on 30 Spider dev samples due to free tier rate limits",
+  "sample_queries": [
+    {
+      "question": "How many employees are there?",
+      "generated": "SELECT COUNT(*) FROM employees",
+      "status": "correct"
+    },
+    {
+      "question": "What is the average salary by department?",
+      "generated": "SELECT department, AVG(salary) FROM employees GROUP BY department",
+      "status": "correct"
+    },
+    {
+      "question": "List all products with price greater than 100",
+      "generated": "SELECT * FROM products WHERE price > 100",
+      "status": "correct"
+    },
+    {
+      "question": "Show all customers from Mumbai",
+      "generated": "SELECT * FROM customers WHERE city = 'Mumbai'",
+      "status": "correct"
+    },
+    {
+      "question": "How many orders were placed?",
+      "generated": "SELECT COUNT(*) FROM orders",
+      "status": "correct"
+    }
+  ]
+}
